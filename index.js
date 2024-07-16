@@ -75,6 +75,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
         dialog.showModal();
         //dialog.close()
     });
-    dialog.showModal();
+    // dialog.showModal();
 });
 
