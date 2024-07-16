@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
         new Book("Drama", "OK Hotane", 1, false)
     ];
 
+
     function Book(title, author, pages, read){
         //constructor
         this.title = title; //title of the book
@@ -35,11 +36,45 @@ document.addEventListener("DOMContentLoaded", ()=>{
             main.innerHTML += createCard(book);
         });
     }
-    function addBookToLibrary(){
+    function addBookToLibrary(book){
         //do stuff here
-    
+        myLibrary.push(book);
     }
     
     printBooks();
-    
+    const button = document.querySelector("#add-book");
+    const dialog = document.querySelector("dialog");
+    const addBook = document.querySelector("#add");
+    const title = document.querySelector("#title");
+    const author = document.querySelector("#author");
+    const pages = document.querySelector("#pages");
+    const read = document.querySelector("#read");
+    const closeButton = document.querySelector("#close");
+    addBook.addEventListener("click", (event)=>{
+        event.preventDefault();
+        if(title.value !== "" && author.value !== "" && pages.value){
+            addBookToLibrary(new Book(title.value, author.value, pages.value, read.checked));
+            dialog.close();
+            printBooks();
+            clearForm();
+            
+        }
+    });
+    function clearForm(){
+        title.value = "";
+            author.value = "";
+            pages.value = null;
+            read.checked = false;
+    }
+    closeButton.addEventListener("click", (event)=>{
+        event.preventDefault();
+        dialog.close();
+        clearForm();
+    })
+    button.addEventListener("click", ()=>{
+        dialog.showModal();
+        //dialog.close()
+    });
+    dialog.showModal();
 });
+

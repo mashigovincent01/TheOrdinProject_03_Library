@@ -7,33 +7,68 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="main">
-        <div class="card">
-            <h2>Title</h2>
-            <h3>by J.K Momo Mokoena</h3>
-            <h3>295 pages</h3>
-            <h3>Read: Yes</h3>
-        </div>
-        <div class="card">
-            <h2>Title</h2>
-            <h3>by J.K Momo Mokoena</h3>
-            <h3>295 pages</h3>
-            <h3>Read: Yes</h3>
-        </div>
-        <div class="card">
-            <h2>Title</h2>
-            <h3>by J.K Momo Mokoena</h3>
-            <h3>295 pages</h3>
-            <h3>Read: Yes</h3>
-        </div>
-        <div class="card">
-            <h2>Title</h2>
-            <h3>by J.K Momo Mokoena</h3>
-            <h3>295 pages</h3>
-            <h3>Read: Yes</h3>
-        </div>
-    </div>
     
+    <section>
+        <h1>My Library</h1>
+        <div class="main">
+            <div class="card">
+                <h2>Title</h2>
+                <h3>by J.K Momo Mokoena</h3>
+                <h3>295 pages</h3>
+                <h3>Read: Yes</h3>
+            </div>
+            <div class="card">
+                <h2>Title</h2>
+                <h3>by J.K Momo Mokoena</h3>
+                <h3>295 pages</h3>
+                <h3>Read: Yes</h3>
+            </div>
+            <div class="card">
+                <h2>Title</h2>
+                <h3>by J.K Momo Mokoena</h3>
+                <h3>295 pages</h3>
+                <h3>Read: Yes</h3>
+            </div>
+            <div class="card">
+                <h2>Title</h2>
+                <h3>by J.K Momo Mokoena</h3>
+                <h3>295 pages</h3>
+                <h3>Read: Yes</h3>
+            </div>
+        </div>
+        <div class="button">
+            <button id="add-book">Add a book</button>
+        </div>
+        <dialog>
+            <h1>Add a book</h1>
+            <form>
+                <fieldset>
+                    <label for="title">Title</label>
+                    <input type="text" name="title" id="title">
+                </fieldset>
+
+                <fieldset>
+                    <label for="author">Author</label>
+                    <input type="text" name="author" id="author">
+                </fieldset>
+                <fieldset>
+                    <label for="pages">Pages</label>
+                    <input type="number" name="pages" id="pages">
+                </fieldset>
+                <fieldset>
+                    <label for="read">Read</label>
+                    <div><input type="checkbox" name="read" id="read"></div>
+                </fieldset>
+                <div style="text-align: center;">
+                    <input type="submit" id="add" value="Add Book">
+                    <input type="submit" id="close" value="Close">
+                </div>
+            </form>
+        </dialog>
+    </section>
+    <footer>
+        by Mashigo Vincent &copy;2024
+    </footer>
     <script src="index.js"></script>
 </body>
 </html>
